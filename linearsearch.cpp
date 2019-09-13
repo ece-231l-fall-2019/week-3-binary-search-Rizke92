@@ -1,15 +1,27 @@
 #include <vector>
+#include <iostream>
 
 bool linearSearch(const std::vector<int>& set, int value)
 {
-	// TODO:
-	// implement me
+	for(size_t w = 0; w < set.size(); w++)
+	{
+		if(set[w] == value)
+		{
+			return true;
+		}
+	}
 	return false;
 }
 
 bool linearSearch(const int *begin, const int *end, int value)
 {
-	// TODO:
-	// implement me
+	while(*begin != *end)
+	{
+		if(*begin == value)
+		{
+			return true;
+		}
+		begin++;
+	}
 	return false;
 }
