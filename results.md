@@ -1,23 +1,22 @@
 # Results Report
---------------------------------------------------
+------------------------------------------------------------
 ## Linear Search vs Binary Search
 
 ### Data:
-#### Complie times without Optizmition 
-| Algorithim |   Time   | Time w/ Pointers |
-|------------|----------|------------------|
-|  Linear    |  data    | data             |
-|  Binary    | time     | time             |
-|------------|----------|------------------|
+#### Complie Time without Optizmition 
+|    Algorithms    |       Time       | Time w/ Pointers |
+|------------------|------------------|------------------|
+|  Linear Search   | 1.70811s         | 104877s          |
+|  Binary Search   | 0.000353734s     | 0.000348874s     |
+
 
 #### Compile Time with Optimition
 
-| Algortim  |   Time   |  Time w/ Pointer|
-|-----------|----------|-----------------|
-| Linear    |   time1  |    time 2       |
-| Binary    |   time1  |    time 2       |
+|    Algorithms    |       Time       | Time w/ Pointers |
+|------------------|------------------|------------------|
+|  Linear Search   | 1.70811s         | 104877s          |
+|  Binary Search   | 0.000353734s     | 0.000348874s     |
 
-
-|----------------------------------------|
+------------------------------------------------------------
 ### Summary
 
