@@ -81,17 +81,17 @@ int main()
 			<< search.size() << " values." << std::endl;
 	}
 	{
-        Timer timer("Time to binary search all values (Recursive): ");
-        int found = 0;
+	        Timer timer("Time to binary search all values (Recursive): ");
+        	int found = 0;
 		for (size_t i = 0; i < search.size(); i++)
-        {
+       	 	{
 			if (binarySearchRecursive(numbers.data(), numbers.data() + numbers.size(), search[i]))
 				found++;
-        }
-        std::cout << "Found "<< found << "/"
-            << search.size() << " values." << std::endl;
-    }
-//-------------------Bubble Sort --------------------------------------------------------------------
+        	}
+        	std::cout << "Found "<< found << "/"
+            		<< search.size() << " values." << std::endl;
+    	}
+//------------------- Bubble Sort --------------------------------------------------------------------
 	{
 		Timer timer("Time to Bubble Sort ");
 		bubbleSort(search.data(), search.data() + search.size());
