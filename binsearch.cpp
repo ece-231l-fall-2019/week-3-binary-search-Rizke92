@@ -33,9 +33,10 @@ bool binarySearch(const std::vector<int>& set, int value)
 
 bool binarySearch(const int *begin, const int *end, int value)
 {
+	const int *middle;
 	while(true)
 	{
-		const int *middle = begin + (end - begin) / 2;
+		middle = begin + (end - begin) / 2;
 
 		if(begin > end)
 		{
@@ -56,4 +57,28 @@ bool binarySearch(const int *begin, const int *end, int value)
 	}
 	return false;
 }
+bool binarySearchRecursive(const int *begin, const int *end, int value)
+{
+	const int *middle;
 
+	middle = begin + (end - begin) / 2;
+	if(begin > end)
+	{
+		return false;
+	}
+	if(*middle == value)
+	{
+		return true;
+	}
+	if(*middle < value)
+	{
+		begin = middle + 1;
+		return binarySearchRecursive(begin, end, value);
+	}
+	else
+	{
+		end = middle - 1;
+		return binarySearchRecursive(begin, end, value);
+	}
+	return false;
+}

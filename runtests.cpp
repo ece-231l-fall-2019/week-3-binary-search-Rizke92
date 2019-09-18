@@ -4,6 +4,7 @@
 
 #include "Timer.h"
 #include "search.h"
+#include "sort.h"
 
 void upLink(std::string file, std::vector<int>& x)
 {
@@ -30,7 +31,7 @@ int main()
 	upLink("numbers", numbers);
 	upLink("search", search);
 
-// -------------------- Linear Search --------------------------------------------
+// -------------------- Linear Search --------------------------------------------------------
 
 	{
 		Timer timer("Time to linear search all values: ");
@@ -56,7 +57,7 @@ int main()
 			<< search.size() << " values." << std::endl;
 	}
 
-//---------------------- Binary Search --------------------------------------------
+//---------------------- Binary Search --------------------------------------------------------
 	{
 		Timer timer("Time to binary search all values: ");
 		int found = 0;
@@ -78,6 +79,29 @@ int main()
 		}
 		std::cout << "Found "<< found << "/"
 			<< search.size() << " values." << std::endl;
+	}
+	{
+        Timer timer("Time to binary search all values (Recursive): ");
+        int found = 0;
+		for (size_t i = 0; i < search.size(); i++)
+        {
+			if (binarySearchRecursive(numbers.data(), numbers.data() + numbers.size(), search[i]))
+				found++;
+        }
+        std::cout << "Found "<< found << "/"
+            << search.size() << " values." << std::endl;
+    }
+//-------------------Bubble Sort --------------------------------------------------------------------
+	{
+		Timer timer("Time to Bubble Sort ");
+		bubbleSort(search.data(), search.data() + search.size());
+		std::vector<int>::iterator itr;
+		std::cout << "Bubble Sort Search Values \n";
+		for(itr = search.begin(); itr < search.end(); itr++)
+		{
+			std::cout << *itr << " "; //prints values
+		}
+		std::cout << "\n";
 	}
 	return 0;
 }
